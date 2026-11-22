@@ -1,0 +1,11 @@
+node_modules
+.env
+state.json
+settings.json
+allowlist.json
+logs/
+inbox/
+.restart-notify
+schedules.json
+dist/
+projects.json

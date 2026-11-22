@@ -1,0 +1,58 @@
+{
+  "name": "chat-agent-bridge",
+  "version": "0.1.0",
+  "description": "在 Lark / 飞书的群里指挥这台电脑上的 Claude Code 和 Codex",
+  "keywords": [
+    "claude-code",
+    "codex",
+    "lark",
+    "feishu",
+    "chatbot",
+    "agent",
+    "bridge"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "chat-agent-bridge": "dist/cli.js",
+    "cab": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && chmod +x dist/cli.js",
+    "cli": "tsx src/cli.ts",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.330",
+    "@larksuiteoapi/node-sdk": "^1.76.0",
+    "@openai/codex-sdk": "^0.171.0",
+    "qrcode-terminal": "^0.12.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StarryAmbition/chat-agent-bridge.git"
+  },
+  "homepage": "https://github.com/StarryAmbition/chat-agent-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/StarryAmbition/chat-agent-bridge/issues"
+  }
+}
