@@ -24,9 +24,7 @@ Chat Agent Bridge 的第一个公开版本。
 ### 安装
 
 ```bash
-git clone https://github.com/StarryAmbition/chat-agent-bridge.git
-cd chat-agent-bridge
-npm install && npm run build && npm link
+npm install -g chat-agent-bridge
 chat-agent-bridge init
 ```
 
